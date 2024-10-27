@@ -1,5 +1,13 @@
+/* Global Styling */
 :root {
-  margin: 30px;
+  background: rgb(2, 0, 36);
+  background: linear-gradient(
+    90deg,
+    rgba(2, 0, 36, 1) 26%,
+    rgba(12, 12, 54, 1) 75%,
+    rgba(18, 58, 66, 1) 100%
+  );
+  overflow-x: hidden;
 }
 
 * {
@@ -10,34 +18,46 @@
 
 body {
   font-family: "Roboto", sans-serif;
-  background-color: #000;
+  background: rgb(2, 0, 36);
+  background: linear-gradient(
+    90deg,
+    rgba(2, 0, 36, 1) 26%,
+    rgba(12, 12, 54, 1) 75%,
+    rgba(18, 58, 66, 1) 100%
+  );
+  color: white;
+  overflow-x: hidden;
+  max-width: 100vw;
 }
 
+/* Navbar Styling */
 .navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 15px 30px;
+  background-color: rgba(2, 0, 36, 0.9); /* Semi-transparent background */
 }
 
 .navbar-list {
+  display: flex;
   margin: 0;
   padding: 0;
   list-style: none;
 }
 
-.navbar-list a {
+.navbar-item {
+  margin-right: 4.5rem;
+}
+
+.navbar-link {
   text-decoration: none;
   color: #fff;
   padding-bottom: 10px;
 }
 
-.navbar-list a:hover {
+.navbar-link:hover {
   border-bottom: 1px solid #fff;
-}
-
-.navbar-item {
-  display: inline-block;
-  margin-right: 4.5rem;
 }
 
 .logo {
@@ -46,54 +66,103 @@ body {
   margin: 10px;
 }
 
+/* Mobile menu toggle icon */
+.mobile-menu-icon {
+  display: none;
+  cursor: pointer;
+  font-size: 28px;
+  color: white;
+}
+
+/* Responsive navbar */
+@media screen and (max-width: 768px) {
+  .navbar-list {
+    position: absolute;
+    top: 80px;
+    left: 0;
+    width: 100%;
+    background-color: rgba(2, 0, 36, 0.95);
+    flex-direction: column;
+    align-items: center;
+    transition: all 0.3s ease;
+    display: none;
+  }
+
+  .navbar-list.mobile {
+    display: flex;
+  }
+
+  .navbar-item {
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+
+  .mobile-menu-icon {
+    display: block;
+  }
+}
+
+/* Hero Section */
 .container {
+  margin: 30px;
   color: #fff;
-  margin-top: 200px;
+  margin-top: 150px;
+}
+
+.heading {
+  text-align: center;
+  margin: 0 auto;
+  max-width: 800px;
 }
 
 .heading h1 {
-  font-weight: 900;
-  font-size: 108px;
-  line-height: 1;
+  font-size: 90px;
+  text-align: center;
+  line-height: 5.5rem;
   margin-bottom: 50px;
-  margin-left: 30px;
 }
 
 .heading p {
-  margin-left: 30px;
-  font-size: 22px;
+  margin-bottom: 10px;
+  font-size: 18px;
+}
+
+/* Button Styling */
+.btn {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
 }
 
 .btn button {
   margin: 30px;
   font-family: "Roboto", sans-serif;
   font-size: 16px;
-}
-
-.btn button {
   color: #222;
   background-color: #fff;
-  border: 1px solid #222;
+  border: 1px solid #fff;
   border-radius: 30px;
   width: 170px;
   height: 55px;
   padding: 10px 20px;
   cursor: pointer;
-  box-shadow: #fff;
   transition: 0.3s ease-in-out;
 }
 
-.btn button:hover {
-  background: linear-gradient(
-    to right,
-    transparent 50%,
-    #000 50%
-  ); /* Gradient with transparent left and white right */
-  background-size: 200% 100%; /* Gradient size to cover entire button */
-  background-position: right bottom; /* Start gradient from right */
-  color: #fff; /* Text color to white */
+button.learn {
+  background-color: transparent;
+  border: 1px solid #fff;
+  color: #fff;
 }
 
+.btn button:hover {
+  background: linear-gradient(to right, transparent 50%, transparent 50%);
+  background-size: 200% 100%;
+  background-position: right bottom;
+  color: #fff;
+}
+
+/* Video Section */
 .video-container {
   height: 0;
   padding-bottom: 56.25%;
@@ -109,116 +178,348 @@ body {
   margin-left: 30px;
 }
 
+/* Banner Section */
 .banner1 {
-  position: relative;
-  color: #fff;
-  display: block;
-  margin: auto;
-  margin-top: 200px;
-  margin-bottom: 150px;
-  width: 50%;
-  align-items: center;
-}
-
-.banner1 h1 {
-  font-size: 50px;
+  width: 100%;
+  margin: 0 auto;
   text-align: center;
-  line-height: 4.5rem;
+  padding: 10px;
 }
 
+.banner1 p {
+  font-size: 1.5rem; /* Initial font size for large screens */
+  line-height: 1.4;
+  max-width: 80%; /* Keeps text within a manageable width */
+  margin: 0 auto;
+  padding: 2.5rem;
+  white-space: normal; /* Allows text to wrap naturally */
+}
+
+/* Responsive Layout */
+@media screen and (max-width: 768px) {
+  .heading h1 {
+    font-size: 60px;
+    line-height: 4rem;
+  }
+
+  .btn button {
+    font-size: 14px;
+    width: 150px;
+    height: 50px;
+  }
+
+  .video-container {
+    width: 100%;
+  }
+  .video-container video {
+    margin-left: 0;
+  }
+
+  .banner1 p {
+    font-size: 1.1rem;
+    max-width: 90%;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .heading h1 {
+    font-size: 40px;
+    line-height: 3rem;
+  }
+
+  .banner1 p {
+    font-size: 1rem;
+    max-width: 100%; /* Use full width on very small screens */
+  }
+
+  .btn button {
+    font-size: 12px;
+    width: 130px;
+    height: 45px;
+  }
+  .video-container video {
+    margin-left: 0;
+  }
+}
+
+/* Container */
+.details-section {
+  margin: 30px;
+  color: #fff;
+}
+
+/* Row Section */
 .row {
   display: flex;
-  align-items: center; /* Align items vertically in the center */
-  justify-content: space-between; /* Space between items */
-  padding: 20px;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px; /* Space between sections */
+  flex-wrap: wrap; /* Allows stacking on smaller screens */
 }
 
 .image-section {
-  /*flex: 2; This makes the image section take up 1 part of the available space */
-  padding-right: 20px; /* Add some space between the image and text */
-  padding-left: 20px;
+  flex: 1;
+  text-align: left;
+  margin: 30px;
 }
 
 .image-section img {
-  width: 80%; /* Make the image responsive */
-  height: auto; /* Maintain the aspect ratio */
+  width: 100%;
+  max-width: 400px; /* Limits image size on larger screens */
+  height: auto;
 }
 
+/* Text Section */
 .text-section {
-  flex: 1; /* This makes the text section take up 2 parts of the available space */
-  padding-left: 2px; /* Add some space between the image and text */
-  color: #fff;
-  line-height: 3.5em;
+  flex: 1;
+  padding: 20px;
 }
 
-.text-section h2 {
-  margin-bottom: 10px;
-  padding: 0 100px;
+.text-section h1,
+.text-section h3 {
+  padding: 0 20px; /* Reduced padding for smaller screens */
 }
 
-.text-section p {
+.text-section h1 {
+  font-size: 1.8rem;
+  margin: 10px 0 40px;
+}
+
+.text-section h3 {
+  font-size: 1rem;
+  line-height: 1.6;
   margin-bottom: 20px;
 }
 
+/* Button styling */
 .text-section button {
   display: flex;
   align-items: center;
-  margin-left: 100px;
+  padding: 10px 20px;
+  background-color: #333;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+/* Button container alignment */
+.text-section .btn {
+  display: flex;
+  justify-content: center; /* Centered by default on smaller screens */
+  margin-top: 20px;
+}
+
+/* Align to the left on desktop screens */
+@media (min-width: 1024px) {
+  .text-section .btn {
+    justify-content: flex-start; /* Aligns the button to the left */
+    margin-left: 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .row {
+    flex-direction: column; /* Stack sections on smaller screens */
+  }
+
+  .text-section h1,
+  .text-section h3 {
+    padding: 0; /* Remove extra padding for smaller screens */
+  }
+
+  .text-section h1 {
+    font-size: 1.5rem;
+  }
+
+  .text-section h3 {
+    font-size: 0.9rem;
+    line-height: 1.4;
+  }
+}
+
+@media (max-width: 480px) {
+  .details-section {
+    margin: 15px; /* Smaller margin for mobile */
+  }
+
+  .text-section h1 {
+    font-size: 1.4rem;
+  }
+
+  .text-section h3 {
+    font-size: 0.85rem;
+  }
+
+  .text-section button {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+/* Projects Section */
+.projects-section {
+  margin: 30px;
+  color: #fff;
+}
+
+.banner1 h1 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 10px;
 }
 
 .projects-section .btn {
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-bottom: 20px;
 }
 
+.projects-section .btn button {
+  padding: 10px 20px;
+  background-color: #333;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.projects-section .btn button:hover {
+  background-color: #555;
+}
+
+/* Projects Layout */
 .projects {
   display: flex;
-  gap: 100px;
+  gap: 30px;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .project-item {
+  flex: 1 1 45%;
   display: flex;
   flex-direction: column;
-  width: 50%;
+  align-items: center;
+  margin: 20px 0;
 }
 
-/* .project-img img {
-  width: 50vw;
-} */
-
-.project-text {
-  color: #fff;
-  margin: 30px 0;
+.project-img img {
+  width: 100%;
+  max-width: 400px; /* Limits image size on larger screens */
+  height: auto;
+  border-radius: 8px;
 }
 
 .project-text h1 {
-  margin: 25px 0;
+  font-size: 1.6rem;
+  margin: 15px 0;
 }
 
 .project-text p {
-  margin: 20px 0;
-  font-size: 14px;
-  line-height: 2.2rem;
+  font-size: 1rem;
+  line-height: 1.6;
+  text-align: center;
   width: 90%;
+  margin: 0 auto;
 }
 
+/* Partners Section */
 .partners {
   text-align: center;
+  margin-top: 40px;
 }
 
-.partners img {
-  width: 100px;
-  margin-left: 50px;
-  margin-top: 150px;
+.partners-logo {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
 }
 
-/* .partners img:not(:last-child) {
-  margin-left: 50px;
-} */
+.partners-logo img {
+  width: 80px;
+  height: auto;
+  margin: 10px;
+  transition: transform 0.3s ease;
+}
+
+.partners-logo img:hover {
+  transform: scale(1.1);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 1024px) {
+  .banner1 h1 {
+    font-size: 1.8rem;
+  }
+
+  .projects {
+    gap: 20px;
+  }
+
+  .project-text h1 {
+    font-size: 1.4rem;
+  }
+
+  .project-text p {
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .project-item {
+    flex: 1 1 100%; /* Stacks project items vertically */
+  }
+
+  .project-text h1 {
+    font-size: 1.3rem;
+  }
+
+  .project-text p {
+    font-size: 0.9rem;
+    line-height: 1.5;
+  }
+
+  .partners-logo img {
+    width: 70px;
+  }
+}
+
+@media (max-width: 480px) {
+  .projects-section {
+    margin: 15px;
+  }
+
+  .banner1 h1 {
+    font-size: 1.6rem;
+  }
+
+  .project-text h1 {
+    font-size: 1.2rem;
+  }
+
+  .project-text p {
+    font-size: 0.85rem;
+  }
+
+  .partners-logo img {
+    width: 60px;
+  }
+}
 
 .footer .btn {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.hu__hu__ {
+  animation: hu__hu__ infinite 2s ease-in-out;
+}
+@keyframes hu__hu__ {
+  50% {
+    transform: translateY(30px);
+  }
 }

@@ -42,6 +42,9 @@ function Projects() {
       </div>
 
       <div className="partners">
+        {/* <div className="banner1">
+          <h1>Partners</h1>
+        </div> */}
         <div className="partners-logo">
           <img src="/ashford.png" alt="" />
           <img src="/themayorrLogo-01.png" alt="" />

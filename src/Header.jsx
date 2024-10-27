@@ -2,17 +2,29 @@ function Header() {
   return (
     <div className="container">
       <div className="heading">
-        <h1>Build. Grow. Innovate.</h1>
+        <div className="cssanimation hu__hu__">
+          <h1>Unlock Your Business Potential</h1>
+        </div>
+
         <p>
+          At NANO FIN SCHEME, we empower visionary entrepreneurs, innovative
+          firms, and forward-thinking governments to navigate the complexities
+          of business and achieve sustainable success.
+        </p>
+        {/* <p>
           We are investing $3 million over the next three years in our <br />
           Build|Grow|Serve Program, created to support and empower Black and
           <br />
           underrepresented communities.
-        </p>
+        </p> */}
       </div>
 
       <div className="btn">
         <button>
+          Get Started &nbsp;
+          <i className="fa fa-long-arrow-right" aria-hidden="true"></i>
+        </button>
+        <button className="learn">
           Learn More &nbsp;
           <i className="fa fa-long-arrow-right" aria-hidden="true"></i>
         </button>
@@ -26,10 +38,10 @@ function Header() {
       </div>
 
       <div className="banner1">
-        <h1>
-          We enrich human lives through the thoughtful application of design and
-          technology
-        </h1>
+        <p>
+          We encourage businesses to discover the core of their ideas and build
+          a strong foundation for a sustainable enterprise.
+        </p>
       </div>
     </div>
   );
