@@ -11,7 +11,7 @@ function Navbar() {
     <nav className="navbar">
       <div className="navbar-brand">
         <img
-          src=".\src\assets\nanofins-logo-icon.png"
+          src=".\public\nanofins-logo-icon.png"
           alt="Logo"
           className="logo"
         />
