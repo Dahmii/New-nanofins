@@ -10,11 +10,7 @@ function Navbar() {
   return (
     <nav className="navbar">
       <div className="navbar-brand">
-        <img
-          src=".\public\nanofins-logo-icon.png"
-          alt="Logo"
-          className="logo"
-        />
+        <img src="/nanofins-logo-icon.png" alt="Logo" className="logo" />
       </div>
 
       {/* Toggle button for mobile view */}
