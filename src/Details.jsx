@@ -1,17 +1,18 @@
+import React from "react";
+
 function Details() {
   return (
     <div className="details-section">
       <div className="row">
         <div className="image-section">
-          <img src="/illustration1.jpg" alt="Description" />
+          <img src="/illustration1.jpg" alt="Research Work" />
         </div>
         <div className="text-section">
           <h1>Research Work</h1>
           <h3>
-            In the summer of 2020, we reported our representation data and
-            committed to doing so annually. One year later we are pleased to
-            share an update on our goals, our progress, and the work that still
-            needs to be done.
+            Expert Guidance in Entrepreneurship Development Our research work
+            services provide comprehensive support for entrepreneurs, offering
+            insights, strategies, and innovative approaches to business growth.
           </h3>
           <div className="btn">
             <button>
@@ -24,15 +25,15 @@ function Details() {
 
       <div className="row">
         <div className="image-section">
-          <img src="/business.jpg" alt="Description" />
+          <img src="/business.jpg" alt="Personalized Coaching" />
         </div>
         <div className="text-section">
           <h1>Personalized Coaching and Mentorship</h1>
           <h3>
-            In the summer of 2020, we reported our representation data and
-            committed to doing so annually. One year later we are pleased to
-            share an update on our goals, our progress, and the work that still
-            needs to be done.
+            Immersive and engaging video lessons leveraging storytelling
+            techniques. Our personalized coaching and mentorship programs are
+            designed to provide tailored guidance and business financing
+            solutions.
           </h3>
           <div className="btn">
             <button>
@@ -45,15 +46,15 @@ function Details() {
 
       <div className="row">
         <div className="image-section">
-          <img src="/business2.jpg" alt="Description" />
+          <img src="/business2.jpg" alt="Idea Development" />
         </div>
         <div className="text-section">
-          <h1>Idea Development</h1>
+          <h1>Shaping SME Ecosystems</h1>
           <h3>
-            In the summer of 2020, we reported our representation data and
-            committed to doing so annually. One year later we are pleased to
-            share an update on our goals, our progress, and the work that still
-            needs to be done.
+            Our ultimate goal is to influence policy directions, fostering a
+            supportive environment for Small and Medium-sized Enterprises (SMEs)
+            to flourish. We cultivate innovation, drive sustainable success, and
+            shape the future of business.
           </h3>
           <div className="btn">
             <button>

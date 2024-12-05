@@ -1,3 +1,5 @@
+import React from "react";
+
 function Header() {
   return (
     <div className="container">
@@ -9,14 +11,10 @@ function Header() {
         <p>
           At NANO FIN SCHEME, we empower visionary entrepreneurs, innovative
           firms, and forward-thinking governments to navigate the complexities
-          of business and achieve sustainable success.
+          of business and achieve sustainable success. Our cutting-edge research
+          and development expertise helps you discover the bedrock of your
+          ideas, transforming them into thriving enterprises.
         </p>
-        {/* <p>
-          We are investing $3 million over the next three years in our <br />
-          Build|Grow|Serve Program, created to support and empower Black and
-          <br />
-          underrepresented communities.
-        </p> */}
       </div>
 
       <div className="btn">
@@ -39,8 +37,11 @@ function Header() {
 
       <div className="banner1">
         <p>
-          We encourage businesses to discover the core of their ideas and build
-          a strong foundation for a sustainable enterprise.
+          From Concept to Movement: Our proprietary methodology guides you from
+          ideation to scaling, unlocking your Value Proposition (VP) and fueling
+          growth. Collaborative teams work closely with you to refine your
+          vision, cultivate a competitive edge, and propel your business
+          forward.
         </p>
       </div>
     </div>
